@@ -1,6 +1,6 @@
 function Navbar(){
     return(
-        <nav class="navbar">
+        <nav className="navbar">
             <h2>HABIT RACKER</h2>
             <ul>
                 <li>Dashboard</li>
