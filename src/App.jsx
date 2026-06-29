@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Navbar from "./components/navbar";
+import Sidebar from "./components/sidebar";
 
-import "./styles/Navbar.css";
-import "./styles/Sidebar.css";
+import "./styles/navbar.css";
+import "./styles/sidebar.css";
 
 function App() {
   return (
