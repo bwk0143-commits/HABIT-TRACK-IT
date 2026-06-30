@@ -1,14 +1,15 @@
-function Navbar(){
-    return(
-        <nav className="Navbar">
-            <h2>HABIT RACKER</h2>
-            <ul>
-                <li>Dashboard</li>
-                <li>profile</li>
-                <li>log out</li>
+function Navbar() {
+  return (
+    <nav className="navbar">
+      <h2>HABIT TRACKER</h2>
 
-            </ul>
-        </nav>
-    );
+      <ul>
+        <li>Dashboard</li>
+        <li>Profile</li>
+        <li>Logout</li>
+      </ul>
+    </nav>
+  );
 }
+
 export default Navbar;
