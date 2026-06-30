@@ -3,7 +3,6 @@ import Sidebar from .componentsSidebar;
 
 import .stylesNavbar.css;
 import .stylesSidebar.css;
-
 function App() {
   return (
     
