@@ -1,22 +1,23 @@
-import Navbar from .componentsNavbar;
-import Sidebar from .componentsSidebar;
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
-import .stylesNavbar.css;
-import .stylesSidebar.css;
+import "./styles/Navbar.css";
+import "./styles/Sidebar.css";
+
 function App() {
   return (
-    
-      Navbar 
+    <>
+      <Navbar />
 
-      div style={{ display flex }}
-        Sidebar 
+      <div style={{ display: "flex" }}>
+        <Sidebar />
 
-        div style={{ padding 30px }}
-          h1Dashboardh1
-          pWelcome to Habit Trackerp
-        div
-      div
-    
+        <div style={{ padding: "30px" }}>
+          <h1>Dashboard</h1>
+          <p>Welcome to Habit Tracker</p>
+        </div>
+      </div>
+    </>
   );
 }
 
