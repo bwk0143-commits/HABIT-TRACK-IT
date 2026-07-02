@@ -227,4 +227,21 @@ header h1 {
   .controls {
     bottom: 12px;
   }
+  .carousel {
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.habit-card {
+  -webkit-user-drag: none;
+}
+
+.habit-card img {
+  pointer-events: none;
+  user-select: none;
+}
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef,useState } from "react";
 import "./index.css";
 
 const habits = [
@@ -54,6 +54,44 @@ export default function App() {
 
     return () => clearInterval(timer);
   }, []);
+  const startX = useRef(null);
+
+const handlePointerDown = (event) => {
+  startX.current = event.clientX;
+  event.currentTarget.setPointerCapture(event.pointerId);
+
+};
+useEffect(() => {
+  const handleKeyboard = (event) => {
+    if (event.key === "ArrowLeft") {
+      move(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+      move(1);
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyboard);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyboard);
+  };
+}, []);
+
+const handlePointerUp = (event) => {
+  if (startX.current === null) return;
+
+  const difference = event.clientX - startX.current;
+
+  if (difference > 50) {
+    move(-1);
+  } else if (difference < -50) {
+    move(1);
+  }
+
+  startX.current = null;
+};
 
   const move = (direction) => {
     setActive((current) => {
@@ -68,7 +106,14 @@ export default function App() {
         <h1>My Daily Habits</h1>
       </header>
 
-      <section className="carousel">
+      <section 
+  className="carousel"
+  onPointerDown={handlePointerDown}
+  onPointerUp={handlePointerUp}
+  onPointerCancel={() => {
+    startX.current = null;
+  }}
+>
         {habits.map((habit, index) => {
           let difference = index - active;
 
