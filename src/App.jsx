@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 
 import "./styles/navbar.css";
 import "./styles/sidebar.css";
-=======
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-
-import "./styles/Navbar.css";
-import "./styles/Sidebar.css";
->>>>>>> 0141c175c9c7a496f7cc83e4b50281253c78abc0
 
 function App() {
   return (
