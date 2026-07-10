@@ -1,5 +1,7 @@
 import { useEffect, useRef,useState } from "react";
 import "./index.css";
+import Navbar from"./components/Navbar.jsx";
+import "./styles/Navbar.css";
 
 const habits = [
   {
@@ -44,7 +46,7 @@ const habits = [
   },
 ];
 
-export default function App() {
+export default  function Home() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -101,10 +103,12 @@ const handlePointerUp = (event) => {
 
   return (
     <main className="app">
+      <Navbar />
       <header>
         <p>BUILD A BETTER ROUTINE</p>
         <h1>My Daily Habits</h1>
       </header>
+
 
       <section 
   className="carousel"
@@ -182,7 +186,9 @@ const handlePointerUp = (event) => {
         <button onClick={() => move(1)} aria-label="Next habit">
           →
         </button>
+        
       </nav>
+      
     </main>
   );
 }

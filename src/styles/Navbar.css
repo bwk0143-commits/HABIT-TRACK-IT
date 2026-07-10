@@ -1,23 +1,67 @@
-.navbar{
-    background:#2563eb;
-    color:white;
-    padding:15px 40px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 999;
+  box-sizing: border-box;
 }
 
-.navbar ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.navbar li{
-    cursor:pointer;
+.logo-icon {
+  font-size: 22px;
 }
 
-.navbar li:hover{
-    color:#ddd;
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #4ade80; /* green accent, adjust to match your carousel */
+}
+
+.nav-login-btn {
+  background: #4ade80;
+  color: #0a0a0a;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.nav-login-btn:hover {
+  opacity: 0.85;
+}
+
+/* Push page content down so navbar doesn't overlap it */
+.app {
+  padding-top: 70px;
 }

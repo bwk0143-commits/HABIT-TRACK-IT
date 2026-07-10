@@ -11,13 +11,15 @@ body,
   margin: 0;
 }
 
-body {
-  overflow: hidden;
-  color: white;
-  background: #000;
-  font-family: Arial, sans-serif;
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  background: #000000;
 }
-
 button {
   color: inherit;
   cursor: pointer;
@@ -25,16 +27,13 @@ button {
 }
 
 .app {
-  min-height: 100%;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at center, #18291f 0%, #07100b 35%, #000 70%);
+  background: radial-gradient(circle at center, #090c0a 0%, #07100b 35%, #000 70%);
 }
-
 header {
   position: absolute;
   top: 30px;
@@ -53,6 +52,7 @@ header p {
 header h1 {
   margin: 8px 0;
   font-size: clamp(25px, 4vw, 42px);
+  color: #79e5a7
 }
 
 .carousel {
@@ -244,4 +244,5 @@ header h1 {
   pointer-events: none;
   user-select: none;
 }
+
 }

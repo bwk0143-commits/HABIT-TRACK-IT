@@ -1,13 +1,16 @@
 function Navbar() {
   return (
+   
     <nav className="navbar">
-      <h2>HABIT TRACKER</h2>
+      <div className="navbar-logo">
+              </div>
 
-      <ul>
-        <li>Dashboard</li>
-        <li>Profile</li>
-        <li>Logout</li>
-      </ul>
+      <div className="navbar-links">
+        <a href="" className="nav-link">Home</a>
+        <a href="#" className="nav-link">Dashboard</a>
+        <a href="#" className="nav-link">Statistics</a>
+        <button className="nav-login-btn">Login</button>
+      </div>
     </nav>
   );
 }
