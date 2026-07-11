@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Python Backend
+backend/venv/
+backend/.env
+backend/__pycache__/
+*.pyc
