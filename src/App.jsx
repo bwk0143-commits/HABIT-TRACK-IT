@@ -2,6 +2,9 @@ import { useEffect, useRef,useState } from "react";
 import "./index.css";
 import Navbar from"./components/Navbar.jsx";
 import "./styles/Navbar.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 const habits = [
   {
@@ -46,7 +49,7 @@ const habits = [
   },
 ];
 
-export default  function Home() {
+ function Home() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -190,5 +193,17 @@ const handlePointerUp = (event) => {
       </nav>
       
     </main>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename="/HABIT-TRACK-IT">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

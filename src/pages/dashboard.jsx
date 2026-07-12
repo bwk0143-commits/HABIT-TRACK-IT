@@ -1,15 +1,71 @@
-function DashboardCard({ title, value, icon, color }) {
-  return (
-    <div className="dashboard-card">
-      <div className="card-top">
-        <span className="icon">{icon}</span>
-        <span className="title">{title}</span>
-      </div>
+import { useEffect, useState } from "react";
+import DashboardCard from "../components/DashboardCard.jsx";
 
-      <h1 style={{ color }}>{value}</h1>
-      <h2>karrthik</h2>
+function Dashboard() {
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    const fetchDashboard = async () => {
+      const token = localStorage.getItem("token");
+
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/dashboard",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setStats(data);
+        }
+      } catch (error) {
+        console.error("Dashboard error:", error);
+      }
+    };
+
+    fetchDashboard();
+  }, []);
+
+  if (!stats) {
+    return <h2 style={{ color: "white" }}>Loading dashboard...</h2>;
+  }
+
+  return (
+    <div className="dashboard">
+      <h1>Dashboard</h1>
+
+      <div className="dashboard-cards">
+        <DashboardCard
+          title="Total Habits"
+          value={stats.totalHabits}
+          icon="📋"
+        />
+
+        <DashboardCard
+          title="Completed"
+          value={stats.completedToday}
+          icon="✅"
+        />
+
+        <DashboardCard
+          title="Pending"
+          value={stats.pending}
+          icon="⏳"
+        />
+
+        <DashboardCard
+          title="Completion"
+          value={`${stats.percentage}%`}
+          icon="📊"
+        />
+      </div>
     </div>
   );
 }
 
-export default DashboardCard;
+export default Dashboard;

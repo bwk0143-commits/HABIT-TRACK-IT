@@ -246,3 +246,58 @@ header h1 {
 }
 
 }
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-page input {
+  padding: 12px;
+  width: 280px;
+}
+
+.login-page button {
+  padding: 12px;
+  background: #79e5a7;
+  color: black;
+  border-radius: 8px;
+}
+
+.dashboard {
+  min-height: 100vh;
+  padding: 40px;
+  color: white;
+}
+
+.dashboard h1 {
+  color: #79e5a7;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-card {
+  padding: 24px;
+  min-width: 220px;
+  background: #141414;
+  color: white;
+  border: 1px solid #ffffff33;
+  border-radius: 16px;
+}
+
+.dashboard-card h2 {
+  color: #79e5a7;
+}
