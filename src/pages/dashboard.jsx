@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import DashboardCard from "../components/DashboardCard.jsx";
+import DashboardCard from "../components/Dashboardcard.jsx";
 
 function Dashboard() {
   const [stats, setStats] = useState(null);
