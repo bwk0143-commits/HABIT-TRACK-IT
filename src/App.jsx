@@ -3,8 +3,8 @@ import "./index.css";
 import Navbar from"./components/Navbar.jsx";
 import "./styles/Navbar.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/login.jsx";
+import Dashboard from "./pages/dashboard.jsx";
 
 const habits = [
   {
