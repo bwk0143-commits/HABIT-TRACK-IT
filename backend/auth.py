@@ -2,8 +2,14 @@ from datetime import datetime,timedelta,timezone
 from jose import jwt,JWTError
 from fastapi import HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+import os
+from dotenv import load_dotenv
 
-SECRET_KEY ="habit-tracker-secret-key"
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise ValueError("SECRET_KEY was not found in the .env file")
 ALGORITHM= "HS256"
 security = HTTPBearer()
 
@@ -35,3 +41,4 @@ def get_current_user(
             status_code=401,
             detail="Invalid or expired token"
         )
+    

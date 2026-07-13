@@ -15,6 +15,7 @@ client = MongoClient(
     tlsCAFile=certifi.where()
 )
 
+
 db = client["habit_tracker"]
 users_collection = db["users"]
 habits_collection = db["habits"]
