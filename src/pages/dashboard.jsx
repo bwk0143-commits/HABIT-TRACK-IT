@@ -10,7 +10,7 @@ function Dashboard() {
 
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/dashboard",
+          "https://habit-track-it.onrender.com/dashboard",
           {
             headers: {
               Authorization: `Bearer ${token}`,

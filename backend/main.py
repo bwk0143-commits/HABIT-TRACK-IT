@@ -12,7 +12,6 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:8000",
         "https://bwk0143-commits.github.io"
     ],
     allow_credentials=True,

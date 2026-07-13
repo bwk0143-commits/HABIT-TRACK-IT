@@ -9,16 +9,16 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const response = await fetch(
+ "https://habit-track-it.onrender.com/login",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  }
+);
 
       const data = await response.json();
 
@@ -30,8 +30,10 @@ function Login() {
         alert(data.detail);
       }
     } catch (error) {
-      alert("Could not connect to backend");
-    }
+  console.error("Login error:", error);
+  alert(error.message);
+}
+    
   };
 
   return (
