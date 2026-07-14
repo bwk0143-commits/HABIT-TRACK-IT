@@ -25,7 +25,7 @@ pwd_context = CryptContext(
 def home():
     return {"message": "Habit Tracker API is running"}
 
-
+ 
 @app.post("/register")
 def register_user(user: UserRegister):
 
@@ -213,3 +213,4 @@ def get_dashboard(
         "pending": pending_habits,
         "percentage": percentage
     }
+

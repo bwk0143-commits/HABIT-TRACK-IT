@@ -9,7 +9,7 @@ function Navbar() {
         <Link to="/" className="nav-link">Home</Link>
         <a href="#" className="nav-link">Dashboard</a>
         <a href="#" className="nav-link">Statistics</a>
-
+        <Link to="/register" className="nav-register-btn">Register</Link>
         <Link to="/login" className="nav-login-btn">
           Login
         </Link>
