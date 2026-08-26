@@ -197,9 +197,13 @@ const handlePointerUp = (event) => {
   );
 }
 
+const basename = window.location.pathname.startsWith("/HABIT-TRACK-IT")
+  ? "/HABIT-TRACK-IT"
+  : "/";
+
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
