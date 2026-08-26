@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/HABIT-TRACK-IT/',
-})
+  base: mode === 'github-pages' ? '/HABIT-TRACK-IT/' : '/',
+}))

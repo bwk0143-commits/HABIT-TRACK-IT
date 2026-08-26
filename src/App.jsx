@@ -4,7 +4,7 @@ import Navbar from"./components/Navbar.jsx";
 import "./styles/Navbar.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login.jsx";
-import Dashboard from "./pages/dashboard.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import Register from "./pages/register.jsx";
 
 const habits = [
@@ -109,7 +109,7 @@ const handlePointerUp = (event) => {
     <main className="app">
       <Navbar />
       <header>
-        <p>BUILD A BETTER ROUTINE</p>
+        
         <h1>My Daily Habits</h1>
       </header>
 
@@ -199,11 +199,11 @@ const handlePointerUp = (event) => {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/HABIT-TRACK-IT">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
