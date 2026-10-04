@@ -17,7 +17,7 @@ import Settings from "./pages/Settings.jsx";
 import Profile from "./pages/Profile.jsx";
 import "./index.css";
 import "./styles/Navbar.css";
-import "./styles/Dashboard.css";
+import "./styles/dashboard.css";
 import "./styles/Sidebar.css";
 
 const API_BASE = "https://habit-track-it.onrender.com";
